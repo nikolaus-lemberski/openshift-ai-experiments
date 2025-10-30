@@ -1,4 +1,4 @@
-# Serving models from Hugging Face
+# OpenShift AI experiments
 
 
 ## S3 endpoint
@@ -19,5 +19,8 @@ Get AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY:
 
 ```bash
 oc get secret modelstorage -n modelstorage -o jsonpath='{.data.AWS_ACCESS_KEY_ID}' | base64 --decode
+```
+
+```bash
 oc get secret modelstorage -n modelstorage -o jsonpath='{.data.AWS_SECRET_ACCESS_KEY}' | base64 --decode
 ```
